@@ -13,7 +13,8 @@
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为python是解释型语言，它的源码都是以明文形式存放的，不过这不算时一个缺点
     </p>
     <h4>线程不能利用多CPU问题</h4>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GIL（Global Interpreter Lock，全局解释器锁）是计算机程序设计语言解释器用于同步线程的工具，使得任何时刻仅有一个线程在执行。Python的线程是操作系统的原生线程，在Linux上为Pthread，在Windows上为Win thread，完全由操作系统调度线程的执行。一个Python解释器进程内有一条主线程，以及多条用户程序的执行线程。即使在多核CPU平台上，由于GIL的存在，所以禁止多线程的并行执行。
     </p>
+
 </body>
 </html>
